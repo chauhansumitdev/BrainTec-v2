@@ -1,0 +1,28 @@
+R_DEF: Internal format may change without notice
+local
+color colorConnected
+color colorNotConnected
+color ic_launcher_background
+drawable braintec
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable progress_bar
+id cancelButton
+id connectionStatusTextView
+id emergencyMsgTextView
+id imageView
+id muteCallsTextView
+id popupTitle
+id speedProgressBar
+id speedTextView
+id voiceAssistanceTextView
+layout activity_main
+layout popup_layout
+mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.BrainTec_v4
+style Theme.BrainTec_v4
+xml backup_rules
+xml data_extraction_rules

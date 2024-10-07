@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorConnected">#00FF00</color>
+    <color name="colorNotConnected">#FF0000</color>
+    <color name="ic_launcher_background">#38B5FE</color>
+    <string name="app_name">BrainTec_v4</string>
+    <style name="Base.Theme.BrainTec_v4" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.BrainTec_v4" parent="Base.Theme.BrainTec_v4"/>
+</resources>
