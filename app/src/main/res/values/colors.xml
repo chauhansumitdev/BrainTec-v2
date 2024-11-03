@@ -2,4 +2,5 @@
 <resources>
     <color name="colorNotConnected">#FF0000</color> <!-- Red color -->
     <color name="colorConnected">#00FF00</color>
+    <color name="my_blue_color">#007bff</color>
 </resources>

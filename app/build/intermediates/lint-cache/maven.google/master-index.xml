@@ -45,6 +45,7 @@
   <androidx.core/>
   <androidx.core.uwb/>
   <androidx.credentials/>
+  <androidx.credentials.registry/>
   <androidx.cursoradapter/>
   <androidx.customview/>
   <androidx.databinding/>

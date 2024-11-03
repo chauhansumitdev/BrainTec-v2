@@ -4,12 +4,12 @@
         "source": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-main-30:\\drawable\\braintec.png"
     },
     {
-        "merged": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-merged_res-28:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-main-30:\\xml\\data_extraction_rules.xml"
-    },
-    {
         "merged": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-merged_res-28:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-main-30:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-merged_res-28:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-main-30:\\xml\\data_extraction_rules.xml"
     },
     {
         "merged": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-merged_res-28:\\mipmap-xxxhdpi_ic_launcher.png.flat",
@@ -26,6 +26,10 @@
     {
         "merged": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-merged_res-28:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-main-30:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-merged_res-28:\\drawable_maps.png.flat",
+        "source": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-main-30:\\drawable\\maps.png"
     },
     {
         "merged": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-merged_res-28:\\mipmap-xhdpi_ic_launcher.png.flat",
@@ -90,6 +94,10 @@
     {
         "merged": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-merged_res-28:\\layout_popup_layout.xml.flat",
         "source": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-main-30:\\layout\\popup_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-merged_res-28:\\drawable_maps.jpg.flat",
+        "source": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-main-30:\\drawable\\maps.jpg"
     },
     {
         "merged": "C:\\Users\\imank\\.gradle\\daemon\\8.0\\com.example.braintec_v4.app-merged_res-28:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",

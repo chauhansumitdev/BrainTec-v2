@@ -3,7 +3,9 @@
     <color name="colorConnected">#00FF00</color>
     <color name="colorNotConnected">#FF0000</color>
     <color name="ic_launcher_background">#38B5FE</color>
+    <color name="my_blue_color">#007bff</color>
     <string name="app_name">BrainTec_v4</string>
+    <string name="maps_descriptor">Open Google Maps</string>
     <style name="Base.Theme.BrainTec_v4" parent="Theme.Material3.DayNight.NoActionBar">
         
         

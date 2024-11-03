@@ -1741,6 +1741,7 @@ color mtrl_textinput_disabled_color
 color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
+color my_blue_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color primary_dark_material_dark
@@ -2466,6 +2467,7 @@ drawable m3_tabs_background
 drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
+drawable maps
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2644,6 +2646,7 @@ id counterclockwise
 id currentState
 id custom
 id customPanel
+id customPhoneNumberEditText
 id cut
 id date_picker_actions
 id decelerate
@@ -2819,6 +2822,7 @@ id notification_main_column_container
 id off
 id on
 id onInterceptTouchReturnSwipe
+id openMapsButton
 id outline
 id outward
 id overshoot
@@ -3233,6 +3237,7 @@ string m3_sys_typescale_label_small_font
 string m3_sys_typescale_title_large_font
 string m3_sys_typescale_title_medium_font
 string m3_sys_typescale_title_small_font
+string maps_descriptor
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection

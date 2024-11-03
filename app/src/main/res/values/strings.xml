@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BrainTec_v4</string>
+    <string name="maps_descriptor">Open Google Maps</string>
 </resources>

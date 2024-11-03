@@ -1740,6 +1740,7 @@ int color mtrl_textinput_disabled_color 0x7f05022f
 int color mtrl_textinput_filled_box_default_background_color 0x7f050230
 int color mtrl_textinput_focused_box_stroke_color 0x7f050231
 int color mtrl_textinput_hovered_box_stroke_color 0x7f050232
+int color my_blue_color 0x7f05024f
 int color notification_action_color_filter 0x7f050233
 int color notification_icon_bg_color 0x7f050234
 int color primary_dark_material_dark 0x7f050235
@@ -2465,6 +2466,7 @@ int drawable m3_tabs_background 0x7f070075
 int drawable m3_tabs_line_indicator 0x7f070076
 int drawable m3_tabs_rounded_line_indicator 0x7f070077
 int drawable m3_tabs_transparent_background 0x7f070078
+int drawable maps 0x7f07009f
 int drawable material_cursor_drawable 0x7f070079
 int drawable material_ic_calendar_black_24dp 0x7f07007a
 int drawable material_ic_clear_black_24dp 0x7f07007b
@@ -2643,6 +2645,7 @@ int id counterclockwise 0x7f080088
 int id currentState 0x7f080089
 int id custom 0x7f08008a
 int id customPanel 0x7f08008b
+int id customPhoneNumberEditText 0x7f0801e2
 int id cut 0x7f08008c
 int id date_picker_actions 0x7f08008d
 int id decelerate 0x7f08008e
@@ -2818,6 +2821,7 @@ int id notification_main_column_container 0x7f080137
 int id off 0x7f080138
 int id on 0x7f080139
 int id onInterceptTouchReturnSwipe 0x7f08013a
+int id openMapsButton 0x7f0801e4
 int id outline 0x7f08013b
 int id outward 0x7f08013c
 int id overshoot 0x7f08013d
@@ -3232,6 +3236,7 @@ int string m3_sys_typescale_label_small_font 0x7f0e0041
 int string m3_sys_typescale_title_large_font 0x7f0e0042
 int string m3_sys_typescale_title_medium_font 0x7f0e0043
 int string m3_sys_typescale_title_small_font 0x7f0e0044
+int string maps_descriptor 0x7f0e0084
 int string material_clock_display_divider 0x7f0e0045
 int string material_clock_toggle_content_description 0x7f0e0046
 int string material_hour_selection 0x7f0e0047

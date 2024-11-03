@@ -1,86 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:src="@drawable/braintec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/customPhoneNumberEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="75dp"
+        android:layout_marginTop="124dp"
+        android:hint="Enter emergency phone number"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
     <TextView
         android:id="@+id/connectionStatusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Status: Not Connected"
-        android:textSize="22sp"
-        android:layout_centerInParent="true"
-        android:textColor="@color/colorNotConnected"
+        android:textSize="15sp"
         android:textStyle="bold"
-        android:layout_margin="20dp" />
+        android:textColor="@color/colorNotConnected"
+        app:layout_constraintTop_toBottomOf="@id/customPhoneNumberEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="30dp" />
 
     <TextView
         android:id="@+id/voiceAssistanceTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/connectionStatusTextView"
-        android:layout_centerInParent="true"
         android:text="Voice Assistance: Off"
-        android:textSize="22sp"
+        android:textSize="15sp"
         android:textStyle="bold"
-        android:layout_margin="20dp" />
-
-    <ProgressBar
-        android:id="@+id/speedProgressBar"
-        style="@android:style/Widget.ProgressBar.Horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/imageView"
-        android:layout_margin="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="126dp"
-        android:max="120"
-        android:progress="100"
-        android:progressDrawable="@drawable/progress_bar" /> <!-- Use custom drawable -->
-
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/braintec"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@id/connectionStatusTextView" />
+        app:layout_constraintTop_toBottomOf="@id/connectionStatusTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="30dp" />
 
     <TextView
         android:id="@+id/muteCallsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/voiceAssistanceTextView"
-        android:layout_centerHorizontal="true"
         android:text="Mute Calls: Off"
-        android:textSize="22sp"
+        android:textSize="15sp"
         android:textStyle="bold"
-        android:layout_margin="20dp" />
+        app:layout_constraintTop_toBottomOf="@id/voiceAssistanceTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="30dp" />
 
     <TextView
         android:id="@+id/emergencyMsgTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/muteCallsTextView"
-        android:layout_centerHorizontal="true"
         android:text="Emergency Msg: Off"
-        android:textSize="22sp"
+        android:textSize="15sp"
         android:textStyle="bold"
-        android:layout_margin="10dp" />
+        app:layout_constraintTop_toBottomOf="@id/muteCallsTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="30dp" />
 
     <TextView
         android:id="@+id/speedTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Speed: 0 km/h"
-        android:textSize="22sp"
+        android:textSize="15sp"
         android:textStyle="bold"
-        android:layout_below="@id/emergencyMsgTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"/>
+        app:layout_constraintTop_toBottomOf="@id/emergencyMsgTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="30dp" />
 
-</RelativeLayout>
+    <ProgressBar
+        android:id="@+id/speedProgressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="120"
+        android:progress="200"
+        android:progressDrawable="@drawable/progress_bar"
+        app:layout_constraintTop_toBottomOf="@id/speedTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="30dp" />
+
+    <Button
+        android:id="@+id/openMapsButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:layout_marginTop="56dp"
+        android:background="@color/my_blue_color"
+        android:text="Open Google Maps"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/speedProgressBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

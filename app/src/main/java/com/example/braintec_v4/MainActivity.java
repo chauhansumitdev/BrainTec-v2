@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.telephony.SmsManager;
@@ -17,6 +18,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +32,8 @@ import androidx.core.app.ActivityCompat;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
     private LocationManager locationManager;
     private Location lastKnownLocation;
     private float lastKnownSpeed;
-    private String emergencyContactNumber = "7807606441";
+    private EditText customPhoneNumberEditText;
+    private String emergencyContactNumber;
     private String statusConnected = "Connected", statusNotConnected = "Not Connected";
     private String voiceAssistanceOn = "Voice Assistance: On", voiceAssistanceOff = "Voice Assistance: Off";
     private String muteCallsOn = "Mute Calls: On", muteCallsOff = "Mute Calls: Off";
@@ -53,6 +59,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        customPhoneNumberEditText = findViewById(R.id.customPhoneNumberEditText);
+
+
+
+        Button openMapsButton = findViewById(R.id.openMapsButton);
+
+        openMapsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGoogleMaps();
+            }
+        });
+
+
         requestSendSmsPermission();
         initializeViews();
         initializeBluetooth();
@@ -60,6 +80,32 @@ public class MainActivity extends AppCompatActivity {
         registerBluetoothReceiver();
         requestLocationPermission();
     }
+
+
+    private void openGoogleMaps() {
+        if (lastKnownLocation != null) {
+            double get_longitude = lastKnownLocation.getLongitude();
+            double get_latitude = lastKnownLocation.getLatitude();
+
+            String uri = String.format(Locale.ENGLISH, "geo:%f,%f", get_latitude, get_longitude);
+
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            Uri gmmIntentUri = Uri.parse(uri);
+            intent.setData(gmmIntentUri);
+            intent.setPackage("com.google.android.apps.maps");
+
+            try {
+                startActivity(intent);
+            } catch (Exception ex) {
+                Toast.makeText(this, "No map application found", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(this, "Location not available yet. Please wait.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+
 
     private void initializeViews() {
         connectionStatusTextView = findViewById(R.id.connectionStatusTextView);
@@ -229,15 +275,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void sendEmergencyMessage(String phoneNumber) {
+
+        if (emergencyContactNumber.isEmpty()) {
+            Toast.makeText(this, "Please enter a valid phone number "+ emergencyContactNumber, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         if (lastKnownLocation != null) {
             String message = String.format(
                     "Please help, I'm in a medical emergency!\n" +
-                            "Location: %.6f, %.6f\n" +
+                            "Map Link: http://maps.google.com/?q=%f,%f\n"+
                             "Speed: %.2f km/h",
                     lastKnownLocation.getLatitude(),
                     lastKnownLocation.getLongitude(),
-                    lastKnownSpeed * 3.6f // Convert m/s to km/h
+                    lastKnownSpeed * 3.6f
             );
+
 
             Log.d("EmergencyMessage", "Message to send: " + message); // Debug log
 
@@ -270,6 +323,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button cancelButton = dialogView.findViewById(R.id.cancelButton);
 
+
         new CountDownTimer(10000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {}
@@ -278,6 +332,7 @@ public class MainActivity extends AppCompatActivity {
             public void onFinish() {
                 if (alertDialog.isShowing()) {
                     alertDialog.dismiss();
+                    emergencyContactNumber = customPhoneNumberEditText.getText().toString().trim();
                     sendEmergencyMessage(emergencyContactNumber);
                 }
             }

@@ -3,15 +3,19 @@ local
 color colorConnected
 color colorNotConnected
 color ic_launcher_background
+color my_blue_color
 drawable braintec
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable maps
 drawable progress_bar
 id cancelButton
 id connectionStatusTextView
+id customPhoneNumberEditText
 id emergencyMsgTextView
 id imageView
 id muteCallsTextView
+id openMapsButton
 id popupTitle
 id speedProgressBar
 id speedTextView
@@ -22,6 +26,7 @@ mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string app_name
+string maps_descriptor
 style Base.Theme.BrainTec_v4
 style Theme.BrainTec_v4
 xml backup_rules
